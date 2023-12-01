@@ -1,0 +1,50 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(255, 0, 0, 0.2);
+    text-align: center;
+}
+
+.photo-home{
+    width: 60px;
+    height: 40px;
+}
+
+.image-home{
+    margin: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(252, 0, 0);
+}
+
+nav{
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.collapse{
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: rgba(255, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form{
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
