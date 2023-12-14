@@ -59,6 +59,11 @@ form{
     height: 650px;
 }
 
+#simulacion-ondas-electromagneticas .simulador{
+    width: 100%;
+    height: 625px;
+}
+
 .button-finalizar{
     background-color: rgba(255, 0, 0, 0.7);
     border: none;
