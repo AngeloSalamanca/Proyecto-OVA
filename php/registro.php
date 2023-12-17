@@ -1,31 +1,23 @@
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "usuarios";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+include("conexion.php");
 
 // Recibir datos del formulario de registro
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST['usuario'];
-    $contrasena = $_POST['contrasena'];
+    $Username = $_POST["username"];
+    $Email = $_POST["email"];
+    $Contrasena = $_POST["contrasena"];
 
     // Insertar usuario en la base de datos
-    $sql = "INSERT INTO usuarios (usuario, contrasena) VALUES ('$usuario', '$contrasena')";
+    $sql = "INSERT INTO usuario (usuario, email, contrasena) VALUES ('$Username', '$Email', '$Contrasena')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Usuario registrado exitosamente";
+    $resultado = mysqli_query($conex, $sql);
+
+    if ($resultado) {
+        echo "<script>alert('Usuario registrado exitosamente');</script>";
+        header("Location: ../presentacion.html");
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "<script>alert('Error al registrar usuario');</script>";
+        header("Location: ../index.html");
     }
-}
 
-$conn->close();
+$conex->close();
 ?>
